@@ -57,11 +57,11 @@ def get_pet_labels(image_dir):
             pet_label = pet_label.strip()
 
         if str(pet_filenames[ind]) not in results_dic:
-           results_dic[str(pet_filenames[ind])] = [pet_label]
+           results_dic[''.join(pet_filenames[ind])] = [pet_label]
 
         else:
             print("** Warning: Duplicate files exist in directory:",
-                  str(pet_filenames[ind]))
+                  ''.join(pet_filenames[ind]))
     # Replace None with the results_dic dictionary that you created with this
     # function
     return results_dic
