@@ -67,7 +67,7 @@ def classify_images(images_dir, results_dic, model):
     """
     for ind,keys in enumerate(results_dic):
 
-        test_label = "pet_images/" + listdir(images_dir)[ind]
+        test_label = images_dir + listdir(images_dir)[ind]
         model_label = classifier(test_label,model)
         model_label = model_label.lower().strip()
 
