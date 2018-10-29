@@ -65,7 +65,6 @@ def classify_images(images_dir, results_dic, model):
      Returns:
            None - results_dic is mutable data type so no return needed.
     """
-    model = "alexnet"
     for ind,keys in enumerate(results_dic):
 
         test_label = "pet_images/" + listdir(images_dir)[ind]
